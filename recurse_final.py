@@ -299,9 +299,9 @@ def house_robber_scan(poem):
             # which is the "winner" for highest values
             # make it stressed, and if it is not, make it unstressed
             elif [pair for pair in prev1 if pair[1] == i]:
-                line_scansion += "/"
+                line_scansion += STRESSED
             else:
-                line_scansion += "u"
+                line_scansion += UNSTRESSED
         poem_scansion.append(line_scansion)
     return "\n".join(poem_scansion)
     
@@ -328,9 +328,9 @@ def simple_scan(poem):
                 if value == " ":
                     line_scansion += value
                 elif value > 1:
-                    line_scansion += "/"
+                    line_scansion += STRESSED
                 else:
-                    line_scansion += "u"
+                    line_scansion += UNSTRESSED
         poem_scansion.append(line_scansion)
     return "\n".join(poem_scansion)
 
@@ -394,9 +394,9 @@ def house_robber_scan_weighted(poem):
             # which is the "winner" for highest values
             # make it stressed, and if it is not, make it unstressed
             elif [pair for pair in prev1 if pair[1] == i]:
-                line_scansion += "/"
+                line_scansion += STRESSED
             else:
-                line_scansion += "u"
+                line_scansion += UNSTRESSED
         poem_scansion.append(line_scansion)
     return "\n".join(poem_scansion)
 
@@ -430,9 +430,9 @@ def trochiamb_scan(poem):
             if value == " ":
                 line_scansion += value
             elif [value, i] in stresses:
-                line_scansion += "/"
+                line_scansion += STRESSED
             else:
-                line_scansion += "u"
+                line_scansion += UNSTRESSED
         poem_scansion.append(line_scansion)
     return "\n".join(poem_scansion)
 
@@ -465,9 +465,9 @@ def anadactyl_scan(poem):
             if value == " ":
                 line_scansion += value
             elif [value, i] in stresses:
-                line_scansion += "/"
+                line_scansion += STRESSED
             else:
-                line_scansion += "u"
+                line_scansion += UNSTRESSED
         poem_scansion.append(line_scansion)
     return "\n".join(poem_scansion)
 
@@ -536,9 +536,9 @@ def trochiamb_correspondence(poem):
     corresCounter = 0
     charCounter = 0
     for i, char in enumerate(hr):
-        if char == t[i] == "/":
+        if char == t[i] == STRESSED:
             corresCounter += 1
-        if t[i] == "/":
+        if t[i] == STRESSED:
             charCounter += 1
     return corresCounter / charCounter
 
@@ -549,9 +549,9 @@ def anadactyl_correspondence(poem):
     corresCounter = 0
     charCounter = 0
     for i, char in enumerate(hrw):
-        if char == a[i] == "/":
+        if char == a[i] == STRESSED:
             corresCounter += 1
-        if a[i] == "/":
+        if a[i] == STRESSED:
             charCounter += 1
     return corresCounter / charCounter
 
@@ -845,5 +845,6 @@ def main():
     print("Here are the words that occur more than once in this poem, excluding stopwords:")
     for word in words_to_show:
         print(f"The poem contains {word[1]} of {word[0]}.")
-        
+    
 main()
+print(judge_accuracy())
