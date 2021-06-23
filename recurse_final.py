@@ -847,4 +847,3 @@ def main():
         print(f"The poem contains {word[1]} of {word[0]}.")
     
 main()
-print(judge_accuracy())
