@@ -2836,12 +2836,12 @@ CLASSIFIED = {
 
 
   ], "anapestic/dactylic": [
-      song, # [('anapest or dactyl', 0.08108843537414966), ('iamb or trochee', 0.11189342403628116)]
-      to_hilda_of_her_roses, # [('iamb or trochee', 0.04001385041551247), ('anapest or dactyl', 0.13141120344721452)]
-      burnt, # [('anapest or dactyl', 0.020609725371630132), ('iamb or trochee', 0.04287114022563756)]
-      voice_in_the_song, # [('iamb or trochee', 0.05864841597796143), ('anapest or dactyl', 0.09483987603305785)]
-      night_before_christmas, # [('anapest or dactyl', 0.06519619827097506), ('iamb or trochee', 0.11349976969954648)]
-      charge_of_the_light_brigade, # [('iamb or trochee', 0.0673783287419651), ('anapest or dactyl', 0.08380165289256199)]
+      song,
+      to_hilda_of_her_roses,
+      burnt,
+      voice_in_the_song,
+      night_before_christmas,
+      charge_of_the_light_brigade,
       banquet,
       comrades,
       rose_to_the_living,
@@ -2853,8 +2853,8 @@ CLASSIFIED = {
 }
 
 mixed_feet = [
-    home_bound, # [('iamb or trochee', 0.01527006172839506), ('anapest or dactyl', 0.09888888888888889)]
-    road_beyond_the_town, # [('iamb or trochee', 0.044112141927083355), ('anapest or dactyl', 0.08276882595486111)]
+    home_bound,
+    road_beyond_the_town,
     nocturne,
     harvest_moon,
     green_golden_door,
